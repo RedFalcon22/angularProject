@@ -55,3 +55,43 @@ app-messaging {
   width: 100%;
 }
 
+
+app-communication-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the calendar & messages horizontally */
+  justify-content: start;
+  gap: 20px; /* Space between elements */
+  width: 100%;
+}
+
+app-calendar {
+  width: 100%; /* Ensures full width inside the sidebar */
+  max-width: 500px; /* Adjust as needed */
+}
+
+app-messaging {
+  width: 100%;
+  max-width: 500px;
+}
+
+
+.dashboard-right-sidebar {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #d4e1f3; /* Red Background */
+  width: 20%;
+  min-width: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Shadow on the left */
+}
+
+
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

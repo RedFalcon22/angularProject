@@ -14,6 +14,12 @@
     border-radius: 5px;
     background-color: #f1f1f1;
   }
+
+  .self-message {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #b18de4;
+  }
   
   input {
     padding: 5px;
