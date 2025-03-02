@@ -1,0 +1,59 @@
+.weekly-schedule {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-header,
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 80px repeat(5, 1fr);
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.schedule-header {
+  border-bottom: 2px solid #ccc;
+}
+
+.schedule-row {
+  display: contents;
+}
+
+.time-column {
+  background: #f0f0f0;
+  font-weight: bold;
+  padding: 8px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-header {
+  padding: 8px;
+  background: #ddd;
+  border-bottom: 1px solid #ccc;
+}
+
+.day-column {
+  min-height: 50px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.subject-card {
+  padding: 6px;
+  font-size: 12px;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  width: 90%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,21 @@
+<aside class="sidebar">
+  <!-- Profile Section (Dynamic) -->
+  <div class="profile">
+      <img [src]="userProfile.profileImage" alt="Profile Image" class="profile-img" />
+      <p class="profile-name">{{ userProfile.name }}</p>
+      <p class="profile-title">{{ userProfile.title }}</p>
+  </div>
+
+  <!-- Navigation Links (Dynamic) -->
+  <nav class="nav">
+      <ul>
+          <li *ngFor="let link of links" 
+              class="nav-item" 
+              [routerLink]="link.route" 
+              routerLinkActive="active-link">
+              <i class="icon"><img [src]="link.icon" alt=""></i>
+              <span>{{ link.label }}</span>
+          </li>
+      </ul>
+  </nav>
+</aside>

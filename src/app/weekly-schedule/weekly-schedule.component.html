@@ -1,0 +1,25 @@
+<div class="weekly-schedule">
+  <!-- Days Header -->
+  <div class="schedule-header">
+    <div class="time-column"></div> <!-- Empty corner -->
+    <div *ngFor="let day of weekDays" class="day-header">{{ day }}</div>
+  </div>
+
+  <!-- Schedule Grid -->
+  <div class="schedule-grid">
+    <div *ngFor="let slot of timeSlots" class="schedule-row">
+      <!-- Time Slot -->
+      <div class="time-column">{{ slot.start }} - {{ slot.end }}</div>
+
+      <!-- Subjects for Each Day -->
+      <div *ngFor="let day of weekDays" class="day-column">
+        <ng-container *ngFor="let course of getCoursesForTimeSlot(day, slot)">
+          <div class="subject-card" [ngStyle]="{'background-color': course.color}">
+            {{ course.subject }} <br />
+            <small>{{ course.room }}</small>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

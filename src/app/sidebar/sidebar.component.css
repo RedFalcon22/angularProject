@@ -1,0 +1,140 @@
+/* Sidebar Styles */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: #d4e1f3;
+  padding: 20px 15px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+/* Profile Section */
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #4c6ef5;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2657a4;
+  margin-top: 8px;
+}
+
+.profile-title {
+  font-size: 0.9rem;
+  color: #4a5f81;
+  opacity: 0.9;
+}
+
+.class-selection-btn {
+  background: #4c6ef5;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease;
+}
+
+.class-selection-btn:hover {
+  background: #3b5bcc;
+  transform: scale(1.05);
+}
+
+/* Navigation Menu */
+.nav {
+  width: 100%;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #2657a4;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 95%; /* Almost full width */
+  margin: 5px auto; /* Center it */
+}
+
+/* Hover Effect */
+.nav-item:hover {
+  background: #5C5EF3;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Icons */
+.icon {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-icon {
+  filter: brightness(0) invert(0.6); /* Default lighter color */
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.sidebar-icon:hover {
+  filter: brightness(1.5);
+  opacity: 1;
+}
+
+/* Active (selected) link */
+.active-link {
+  background-color: #007bff !important;
+  color: white !important;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+    padding: 15px;
+  }
+
+  .nav-item {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  .profile-img {
+    width: 70px;
+    height: 70px;
+  }
+}

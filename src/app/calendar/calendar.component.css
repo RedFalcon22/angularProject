@@ -1,0 +1,70 @@
+/* Adjusted Container Styling */
+.calendar-container {
+    width: 100%;
+    max-width: 280px; /* Reduced size */
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 14px; /* Smaller text */
+  }
+  
+  /* Header Styling */
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .calendar-header h2 {
+    font-size: 16px; /* Adjust title size */
+  }
+  
+  .calendar-header button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  
+  /* Grid for Days */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px; /* Smaller spacing */
+  }
+  
+  .weekday {
+    font-weight: bold;
+    padding: 3px;
+    text-align: center;
+    background: #f1f1f1;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+  /* Day Cells */
+  .calendar-day {
+    width: 30px; /* Smaller cells */
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 12px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .calendar-day:hover {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Empty Days (Padding for Weeks) */
+  .empty {
+    visibility: hidden;
+  }
+  

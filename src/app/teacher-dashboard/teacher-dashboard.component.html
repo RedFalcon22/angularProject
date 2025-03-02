@@ -1,0 +1,29 @@
+<section class="d-flex justify-content-between gap-3">
+  <!-- Left Sidebar -->
+  <app-sidebar class="flex-shrink-0" style="width: 250px;"></app-sidebar>
+
+  <!-- Main Content -->
+  <div class="dashboard-container flex-grow-1 mx-auto p-3 d-flex flex-column gap-3">
+      <h1 class="text-center text-primary fw-bold">Tableau de Bord</h1>
+
+      <!-- Info Cards Section -->
+      <div class="info-cards-container">
+        <app-info-cards></app-info-cards>
+    </div>
+
+      <!-- Weekly Schedule Section -->
+      <app-weekly-schedule></app-weekly-schedule>
+
+      <!-- Navigation Buttons -->
+      <div class="d-flex justify-content-center gap-3 mt-3">
+          <button routerLink="/messages" class="btn btn-primary">📩 Messages</button>
+          <button routerLink="/calendar" class="btn btn-primary">📅 Calendrier</button>
+      </div>
+  </div>
+
+  <!-- Right Sidebar (Calendar + Messages) -->
+  <div class="dashboard-right-sidebar flex-shrink-0 d-flex flex-column gap-3">
+      <app-calendar></app-calendar>
+      <app-messaging></app-messaging>
+  </div>
+</section>

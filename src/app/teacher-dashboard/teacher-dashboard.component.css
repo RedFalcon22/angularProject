@@ -1,0 +1,57 @@
+/* Wrapper Layout */
+.dashboard-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Left Sidebar */
+app-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+/* Main Content */
+.dashboard-container {
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Right Sidebar */
+.dashboard-right-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Make sure Calendar & Messaging take full width */
+app-calendar,
+app-messaging {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .dashboard-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .dashboard-right-sidebar {
+    width: 100%;
+  }
+}
+
+.info-cards-container {
+  display: grid;
+  place-items: center; /* Centers both horizontally and vertically */
+  width: 100%;
+}
+

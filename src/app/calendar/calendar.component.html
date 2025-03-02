@@ -1,0 +1,20 @@
+<div class="calendar-container">
+    <!-- Month Navigation -->
+    <div class="calendar-header">
+      <button (click)="prevMonth()">◀</button>
+      <h2>{{ monthNames[currentMonth] }} {{ currentYear }}</h2>
+      <button (click)="nextMonth()">▶</button>
+    </div>
+  
+    <!-- Weekday Labels -->
+    <div class="calendar-grid">
+      <div class="weekday" *ngFor="let day of weekDays">{{ day }}</div>
+  
+      <!-- Days in Month -->
+      <div *ngFor="let day of calendarDays" class="calendar-day"
+           [class.empty]="day === null">
+        <span *ngIf="day !== null">{{ day }}</span>
+      </div>
+    </div>
+  </div>
+  
