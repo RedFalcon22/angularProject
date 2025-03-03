@@ -95,3 +95,14 @@ app-messaging {
   justify-content: center;
   width: 100%;
 }
+
+.schedule-title {
+	font-family: 'Dancing Script', cursive;
+
+	font-size: 30px;
+  font-weight: 90;
+	margin-bottom: 20px;
+	margin-top: 30px;
+  text-align: center;
+  color: rgb(186, 58, 254);
+}

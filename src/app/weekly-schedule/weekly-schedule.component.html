@@ -1,4 +1,4 @@
-<div class="weekly-schedule">
+<div class="weekly-schedule shadow-lg rounded-3">
   <!-- Days Header -->
   <div class="schedule-header">
     <div class="time-column"></div> <!-- Empty corner -->
@@ -15,8 +15,11 @@
       <div *ngFor="let day of weekDays" class="day-column">
         <ng-container *ngFor="let course of getCoursesForTimeSlot(day, slot)">
           <div class="subject-card" [ngStyle]="{'background-color': course.color}">
-            {{ course.subject }} <br />
-            <small>{{ course.room }}</small>
+            <span class="subject-title">{{ course.subject }}</span>
+            <br />
+            <span class="subject-time">
+              <i class="far fa-clock"></i> {{ slot.start }} - {{ slot.end }}
+            </span>
           </div>
         </ng-container>
       </div>

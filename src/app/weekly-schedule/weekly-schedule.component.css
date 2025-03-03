@@ -1,60 +1,102 @@
+/* Weekly Schedule Container */
 .weekly-schedule {
-  background-color: #bfabf2;
-  width: 90%;
-  max-width: 800px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 900px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
 }
 
+/* Grid Layout */
 .schedule-header,
 .schedule-grid {
   display: grid;
-  grid-template-columns: 80px repeat(5, 1fr);
+  grid-template-columns: 100px repeat(5, 1fr);
   text-align: center;
   font-weight: bold;
   font-size: 14px;
 }
 
+/* Header Row */
 .schedule-header {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Horizontal Grid Lines */
+.schedule-grid {
+  position: relative;
 }
 
 .schedule-row {
   display: contents;
 }
 
+/* Time Column */
 .time-column {
-  background: #f0f0f0;
   font-weight: bold;
-  padding: 8px;
-  border-right: 1px solid #ccc;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
 }
 
+/* Day Headers */
 .day-header {
-  padding: 8px;
-  background: #ddd;
-  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  background: #e9ecef;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: rgb(255, 255, 255);
 }
 
+/* Day Columns */
 .day-column {
-  min-height: 50px;
-  border-right: 1px solid #ccc;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
+  position: relative;
 }
 
+/* Subject Card */
 .subject-card {
-  padding: 6px;
-  font-size: 12px;
-  border-radius: 6px;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 8px;
   color: white;
   text-align: center;
-  width: 90%;
+  width: auto;
+  max-width: 80%;
+  min-width: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Subject Title */
+.subject-title {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Subject Time */
+.subject-time {
+  font-size: 11px;
+  display: block;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+/* Subject Icon */
+.subject-card i {
+  margin-right: 5px;
 }
